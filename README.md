@@ -3,6 +3,7 @@
 > **A collaborative web playground where creativity has no limits**
 
 Welcome to The lair... 
+
 ![11](https://github.com/user-attachments/assets/4301f410-4be1-42e9-af9c-c50fb4414f82)
 
 The Playground Project is an open-source, community-driven website where anyone can create their own web pages using HTML, CSS, and maybe a sprinkle of JavaScript! This is your digital sandbox to experiment, learn, and showcase your skills alongside other creators. (you can be one of the first collaborators for now)
