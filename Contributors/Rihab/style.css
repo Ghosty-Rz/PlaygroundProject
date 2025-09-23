@@ -1,0 +1,25 @@
+body{
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+body p{
+    margin-left: 20px;
+}
+
+.main-title {
+    color: #121a8c;
+    margin-left: 20px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px solid #121a8c;
+    border-radius: 20px;
+    width: 350px;
+    height: auto;
+    object-fit: cover;
+}
