@@ -136,7 +136,7 @@ body {
     border-radius: 10px 50px 10px 10px;
 }
 .image-2 img {
-    width: 100%;
+    width: 40%;
     height: 100%;
     object-fit: cover;
     display: block;
@@ -304,12 +304,55 @@ body {
         grid-template-columns: 1fr;
     }
 
+    .hero-left-section {
+        width: 100%;
+        padding: 10px;
+        gap: 0px;
+    }
+
+    .image-2 img {
+        width: 100%;
+    }
+
     .hero-title {
         font-size: 10vw;
     }
 }
 
 @media (max-width: 768px) {
+    .container {
+        border-radius: 30px;
+        padding: 10px;
+    }
+
+    .image-section {
+        display: flex;
+        grid-template-rows: auto;
+        gap: 0px;
+        flex-direction: column;
+    }
+
+    .hero-left-section {
+        width: 100%;
+        padding: 10px;
+        gap: 0px;
+    }
+
+    .image-1 img {
+        width: 100%;
+    }
+
+    .app-info {
+        border: 2px solid var(--border-color);
+        border-radius: 10px;
+        padding: 20px;
+        margin-top: 25px;
+    }
+
+    .image-2 img {
+        width: 100%;
+    }
+
     .header {
         flex-direction: column;
         gap: 10px;
@@ -319,7 +362,13 @@ body {
         justify-content: center;
     }
     .hero-title {
-        font-size: 12vw;
+        font-size: 10vw;
+        padding: -10px;
+    }
+
+    .profile-row {
+        padding-top: 20px;
+        padding-left: 35px;
     }
 }
 
