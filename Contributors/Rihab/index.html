@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Rihab's Page</title>
 </head>
 <body>
@@ -12,9 +13,66 @@
         <a style="margin-left: 500px; margin-right: 500px; color: black;" class="nav-text" href="#">Ghosty.Rz</a>
         <a class="nav-text" href="#">Contact</a>
     </nav>
+
+    <audio id="background-audio" loop src="./mysounds/Jeff Buckley - Grace (Official Video).mp3"></audio>
+
+    <button class="audiobtn" id="audio-toggle">🎙️</button>
+    
     <section class="funky-pictures">
-        <img src="https://media.giphy.com/media/3o6Zt481isNVuQI1l6/giphy.gif">
+        <div class="collage-container">
+            <div class="card card-1">
+                <img src="./myimages/greenmoto.jpg" alt="Collage Image 1">
+            </div>
+
+            <div class="card card-2">
+                <img src="./myimages/picnic.jpg" alt="Collage Image 2">
+            </div>
+
+            <div class="hover-area">
+                <div class="card card-3">
+                    <img src="./myimages/laugh.jpg" alt="Collage Image 3">
+                </div>
+
+                <div class="gif-popup">
+                    <img src="./myimages/snoopygif.gif" alt="Popup GIF">
+                </div>
+            </div>
+
+            <div class="card card-4">
+                <img src="./myimages/bw.jpg" alt="Collage Image 4">
+            </div>
+
+            <div class="card card-5">
+                <img src="./myimages/made by @ecto_fun on twitter_x.jpg" alt="Collage Image 5">
+            </div>
+
+            <div class="card card-6">
+                <img src="./myimages/snoopy +rush hour.jpg" alt="Collage Image 5">
+            </div>
+
+            <div class="cardt text-1">
+                <p>This is Snoopy, and snoopy has been a bit everywhere.</p>
+            </div>"
+
+            <div class="cardt text-2">
+                <p>Snoopy also loves to dance ! You can play some music for Snoopy</p>
+            </div>
+            
+            <div class="cardt text-3">
+                <p>I want to be like Snoopy</p>
+            </div>
+
+            <div class="cardt text-4">
+                <p>when i grow up !</p>
+            </div>
+
+            <div class="floating-shape"></div>
+        </div>
+
+        <audio id="popup-sound" src="./mysounds/pop-cartoon-328167.mp3" preload="auto"></audio>
+
     </section>
+
     <div class="main-title">
         <h1>RIHAB ZOUITNI
             <div class="star-1">
@@ -39,10 +97,20 @@
         <p>Web Developer? AI engineer? Software ?| do i know at this point</p>
     </div>
 
+    
+
     <section class="glass-section">
         <div class="glass-card">
             <h2>About Me</h2>
             <p>lorem ipsum </p>
-        </div>    
+        </div>
+    </section>   
+        
+        
+
+    <!-- Custom cursor ring -->
+    <div id="cursor"></div>
+
+    <script src="script.js"></script>
 </body>
 </html>

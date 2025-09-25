@@ -1,14 +1,70 @@
 body{
-    background-image: url(./myimages/pexels-bertellifotografia-13871912.jpg);
+    background-image: url(./myimages/pexels-bertellifotografia-13871912.webp);
     background-color: #4f1312;
     background-size: cover;
-    background-attachment:local;
+    background-attachment:fixed;
     background-repeat: no-repeat;
 }
 body p{
     margin-left: 20px;
 }
 
+/* ===== Custom Cursor Variables ===== */
+:root{
+  --cursor-size: 28px;      /* ring diameter */
+  --cursor-color: #ffffff;  /* ring & dots color */
+  --dot-size: 8px;          /* trail dot size */
+  --trail-duration: 700ms;  /* fade time for dots */
+}
+
+/* hide the default cursor on non-touch */
+body:not(.no-custom-cursor) { cursor: none; }
+
+/* the main ring that follows the mouse */
+#cursor{
+  position: fixed;
+  left: 0; top: 0;
+  width: var(--cursor-size);
+  height: var(--cursor-size);
+  margin-left: calc(var(--cursor-size) * -0.5);
+  margin-top:  calc(var(--cursor-size) * -0.5);
+  border: 2px solid var(--cursor-color);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 60ms linear, opacity 150ms ease;
+  /* shows up on any bg*/
+  /* mix-blend-mode: difference; */
+}
+
+/* small fading dots that form the trail */
+.cursor-dot{
+  position: fixed;
+  width: var(--dot-size);
+  height: var(--dot-size);
+  margin-left: calc(var(--dot-size) * -0.5);
+  margin-top:  calc(var(--dot-size) * -0.5);
+  background: var(--cursor-color);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  animation: cursorFade var(--trail-duration) ease-out forwards;
+  mix-blend-mode: difference; /* optional */
+}
+
+@keyframes cursorFade{
+  0%   { transform: scale(1);   opacity: 1; }
+  100% { transform: scale(0.2); opacity: 1; }
+}
+
+/* click + hover feedback (optional) */
+#cursor.is-down { transform: scale(0.75) translateZ(0); }
+#cursor.is-hover { transform: scale(1.4) translateZ(0); }
+
+
+
+
+/* Start of the page */
 nav {
     background-color: none;
     padding: 10px;
@@ -198,4 +254,226 @@ nav {
 
     color: #fffdef;
     font-family:'Times New Roman', Times, serif;
+}
+
+/*The cards*/
+
+.collage-container {
+    margin-top: 40px;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    /* Sets the reference point for absolute children */
+    position: relative;
+    /* Sets the deep red background color */
+
+    margin-bottom: -220px
+}
+
+.card {
+    position: absolute; /* Allows for easy positioning and layering */
+    width: 200px; /* size */
+    z-index: 10; 
+    overflow: hidden;
+    /* Gives the card a subtle dark background/border if needed */
+    background-color: rgba(0, 0, 0, 0.1);
+    margin-left: 70px;
+    transition: transform 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.card-1 {
+    width: 300px;
+    height: 150px;
+    border-radius: 60px;
+    top: 15%;
+    left: 5%;
+    transform: rotate(-25deg);
+}
+
+.card-2 {
+    width: 150px;
+    height: 150px;
+    top: 29%;
+    left: 19.5%;
+    transform: rotate(-25deg);
+}
+
+.card-3 {
+    width: 250px;
+    height: 150px;
+    top: 41%;
+    left: 28%;
+    transform: rotate(-25deg);
+    border-radius: 0px 0px 0px 25px;
+}
+
+.card-4 {
+    width: 220px;
+    height: 300px;
+    top: 25.6%;
+    left: 45%;
+    transform: rotate(-25deg);
+}
+
+.card-4 img {
+    object-position: left;
+}
+
+.card-5 {
+    width: 200px;
+    height: 150px;
+    border-radius: 80px;
+    top: 34.5%;
+    left: 60.5%;
+    transform: rotate(-25deg);
+}
+
+.card-5 img {
+    scale: 1.05;
+}
+
+.card-6 {
+    width: 150px;
+    height: 200px;
+    top: 8.5%;
+    left: 70%;
+    transform: rotate(-25deg);
+    border-radius: 0px 00px 40px 0px;
+}
+
+.card-6 img {
+    scale: 1.1;
+}
+
+.cardt{
+    position: absolute; /* Allows for easy positioning and layering */
+    width: 200px; /* size */
+    z-index: 10; 
+    overflow: hidden;
+    /* Gives the card a subtle dark background/border if needed */
+    margin-left: 70px;
+}
+
+.text-1 {
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    top: 35%;
+    left: 5%;
+    transform: rotate(-25deg);
+    color: #fffdef;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-style: italic;
+    text-align: right;
+    z-index: 10; 
+}
+
+.text-2 {
+    position: absolute;
+    width: 400px;
+    height: 100px;
+    top: 24%;
+    left: 28.5%;
+    transform: rotate(-25deg);
+    color: #fffdef;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-style: italic;
+    text-align: left;
+    z-index: 10; 
+}
+
+.text-3 {
+    position: absolute;
+    width: 300px;
+    height: 100px;
+    top: 16%;
+    left: 70%;
+    transform: rotate(65deg);
+    color: #fffdef;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-style: italic;
+    z-index: 10; 
+}
+
+.text-4 {
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    top: 28.5%;
+    left: 70.5%;
+    transform: rotate(155deg);
+    color: #fffdef;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-style: italic;
+    z-index: 10; 
+}
+
+
+.card:hover {
+    transform: scale(1.05) rotate(-30deg);
+    z-index: 11; /* Bring to front on hover */
+}
+
+.hover-area {
+    /* Required to position the popup relative to this element */
+    position: absolute;
+    cursor: pointer;
+    top: 40.8%;
+    left: 28%;
+    border-radius: 0px 0px 0px 25px; 
+}
+
+.gif-popup {
+    /* Position the popup relative to the hover-area */
+    position: absolute;
+    top: 50%; /* Position it vertically */
+    left: 100%; /* Start it just to the right of the hover-area */
+    z-index: 11;
+
+    /* --- Initial State (Hidden/Off-screen) --- */
+    opacity: 0;
+    /* Use 'translate' to slightly shift it back, ready to slide in */
+    transform: translate(20px, -50%); /* Start 20px further right and center vertically */
+    
+    /* --- The Transition for Smoothness --- */
+    /* Apply transition to opacity and transform over 0.5 seconds */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out infinite;
+}
+
+.gif-popup img {
+    max-width: 200px; /* Adjust size as needed */
+    border-radius: 5px;
+}
+
+.hover-area:hover .gif-popup {
+    /* --- Final State (Visible/On-screen) --- */
+    opacity: 1;
+    /* Slide it back into the desired spot (e.g., right next to the element) */
+    transform: translate(0, -50%); /* Move 0px horizontally and stay centered vertically */
+}
+
+.audiobtn{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 11;
 }
