@@ -10,7 +10,6 @@ The Playground Project is an open-source, community-driven website where anyone 
 
 ![The Playground Project Preview](https://img.shields.io/badge/Status-Open%20for%20Collaboration-brightgreen)
 ![GitHub contributors](https://img.shields.io/badge/Contributors-Welcome!-orange)
-![License](https://img.shields.io/badge/License-MIT-blue)
 
 ## 🌱 What is This?
 
