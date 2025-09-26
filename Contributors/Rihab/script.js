@@ -97,3 +97,5 @@ btn.addEventListener("click", () => {
   function parseTime(t){ return t.endsWith('ms') ? parseFloat(t) : parseFloat(t)*1000; }
 })();
 
+    
+console.log("what you doing here !!?  ∘ ∘ ∘ ( °ヮ° ) ?");
